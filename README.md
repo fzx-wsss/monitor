@@ -23,6 +23,7 @@
   * mybatis：mybatis_mapper_应用名_类名, tag:方法名
   * redis：redis_metrics_应用名, tag:方法名
   * feign:feign_应用名_类名, tag:方法名
+  * 调用异常的key：monitor_key_error, tag:监控key_tag
 * 注意事项
   * 本监控包未将任何maven依赖传递下去，需要自行添加依赖
   * dubbo监控仅测试过2.7.23版本，其他版本可能不兼容

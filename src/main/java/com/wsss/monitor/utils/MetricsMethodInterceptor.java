@@ -20,6 +20,9 @@ public class MetricsMethodInterceptor implements MethodInterceptor {
         Monitor.TimeContext timeContext = Monitor.timer(METRICS_KEY,invocation.getMethod().getName());
         try {
             return invocation.proceed();
+        } catch (Exception e) {
+            timeContext.error();
+            throw e;
         } finally {
             timeContext.end();
         }
